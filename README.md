@@ -124,7 +124,7 @@ Límites de las cuentas gratis:
 
 Funciones que dependen de tu cuenta y hay que probar antes de confiar:
 
-- La **respuesta privada a un comentario** y los **botones** no están entre las herramientas de Instagram de Composio. Contesta los manda con la llamada directa de Composio a Instagram. Si tu conexión no tiene ese permiso, el envío falla y lo ves en el Registro. Se apaga con `COMPOSIO_PROXY=0`.
+- La **respuesta privada a un comentario** y los **botones** no están entre las herramientas de Instagram de Composio. Contesta los manda con la llamada directa de Composio a Instagram. La respuesta privada a un comentario se probó con una cuenta real (noviembre de 2026) y llegó; los botones todavía no se probaron. Si tu conexión no tiene ese permiso, el envío falla y lo ves en el Registro. Se apaga con `COMPOSIO_PROXY=0`.
 - Las **respuestas y menciones en historias** se detectan solo si Instagram las incluye en los mensajes que devuelve.
 
 ## Problemas comunes

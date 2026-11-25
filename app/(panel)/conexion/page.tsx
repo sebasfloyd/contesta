@@ -55,7 +55,7 @@ export default async function Conexion({ searchParams }: { searchParams: Promise
           <div className="pila chico" style={{ gap: 6 }}>
             <div>Leer comentarios y mensajes nuevos: por consulta periódica (Composio no avisa al instante de lo que pasa en Instagram).</div>
             <div>Responder comentarios en público y mandar texto por privado a quien ya te escribió: sí.</div>
-            <div>Respuesta privada a quien solo comentó, botones y respuestas rápidas: {proxyActivo() ? "sí, por la llamada directa de Composio a Instagram. Probalo con tu cuenta antes de confiar: depende de los permisos que Instagram le dio a la conexión." : "apagado (COMPOSIO_PROXY=0)."}</div>
+            <div>Respuesta privada a quien solo comentó, botones y respuestas rápidas: {proxyActivo() ? "sí, por la llamada directa de Composio a Instagram. La respuesta privada a un comentario está probada con una cuenta real; los botones todavía no, probalos con tu cuenta antes de confiar." : "apagado (COMPOSIO_PROXY=0)."}</div>
             <div>Respuestas y menciones en historias: se detectan si Instagram las incluye en los mensajes que devuelve. Probalo con tu cuenta.</div>
           </div>
         </section>
