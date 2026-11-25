@@ -1,4 +1,5 @@
-import { abrirLocal, migrar, type Base } from "@/lib/db";
+import { abrirLocal, type Base } from "@/lib/db";
+import { migrar } from "@/lib/migraciones";
 import { CanalSimulado } from "@/lib/canales/simulado";
 import type { EventoEntrante } from "@/lib/canales/tipos";
 import { crearMotor, type GeneradorIA } from "@/lib/motor/motor";

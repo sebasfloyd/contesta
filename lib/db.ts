@@ -15,8 +15,6 @@ export interface Base {
   cerrar(): Promise<void>;
 }
 
-export const CARPETA_MIGRACIONES = path.join(process.cwd(), "supabase", "migrations");
-
 export async function abrirPostgres(url: string): Promise<Base> {
   const { default: postgres } = await import("postgres");
   // prepare:false es obligatorio con el pooler de Supabase en modo transacción (puerto 6543).
@@ -37,7 +35,7 @@ export async function abrirPostgres(url: string): Promise<Base> {
 /** Base embebida. Sin carpeta queda en memoria (para los tests). */
 export async function abrirLocal(carpeta?: string): Promise<Base> {
   const { PGlite } = await import("@electric-sql/pglite");
-  if (carpeta) fs.mkdirSync(carpeta, { recursive: true });
+  if (carpeta) fs.mkdirSync(/*turbopackIgnore: true*/ carpeta, { recursive: true });
   const db = new PGlite(carpeta);
   await db.waitReady;
   return {
@@ -53,21 +51,6 @@ export async function abrirLocal(carpeta?: string): Promise<Base> {
   };
 }
 
-/** Aplica las migraciones de supabase/migrations que falten, en orden. Devuelve las que aplicó. */
-export async function migrar(base: Base, carpeta = CARPETA_MIGRACIONES): Promise<string[]> {
-  await base.correr("create table if not exists _migraciones (nombre text primary key, aplicada timestamptz not null default now())");
-  const hechas = new Set((await base.q<{ nombre: string }>("select nombre from _migraciones")).map((f) => f.nombre));
-  const archivos = fs.readdirSync(carpeta).filter((a) => a.endsWith(".sql")).sort();
-  const aplicadas: string[] = [];
-  for (const archivo of archivos) {
-    if (hechas.has(archivo)) continue;
-    await base.correr(fs.readFileSync(path.join(carpeta, archivo), "utf8"));
-    await base.q("insert into _migraciones (nombre) values ($1)", [archivo]);
-    aplicadas.push(archivo);
-  }
-  return aplicadas;
-}
-
 export const usaBaseLocal = () => !process.env.DATABASE_URL;
 
 // Una sola conexión por proceso (en desarrollo Next recarga módulos: por eso va en globalThis).
@@ -81,7 +64,9 @@ export function base(): Promise<Base> {
       if (process.env.VERCEL) {
         throw new Error("Falta DATABASE_URL: en Vercel hay que conectar la base de Supabase. Mirá el README, paso 3.");
       }
-      const local = await abrirLocal(path.join(process.cwd(), process.env.CARPETA_DATOS || ".datos"));
+      const local = await abrirLocal(path.join(/*turbopackIgnore: true*/ process.cwd(), process.env.CARPETA_DATOS || ".datos"));
+      // Solo en tu compu: la base local se crea sola la primera vez.
+      const { migrar } = await import("./migraciones");
       await migrar(local);
       return local;
     })();
