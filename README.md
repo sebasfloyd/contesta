@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="docs/img/portada.png" alt="Contesta: respondé los comentarios y mensajes de tu Instagram en automático, con tu propia cuenta. A la derecha, un ejemplo: alguien comenta GUÍA, recibe una respuesta pública y un privado que le pide el mail, y queda guardado como contacto." width="100%">
+  <img src="docs/img/portada.png" alt="Contesta: tu propio ManyChat, gratis y con tu cuenta. A la derecha, un ejemplo: alguien comenta GUÍA, recibe una respuesta pública y un privado que le pide el mail, y queda guardado como contacto." width="100%">
+</p>
+
+<p align="center">
+  <img src="docs/img/animacion.gif" alt="Animación del panel de Contesta: llega un comentario con la palabra GUÍA, la automatización «Comentá GUÍA y te la mando» lo detecta, sale la respuesta pública, se envía el mensaje privado con el link, el contacto queda guardado con la etiqueta guía y suben los números de las estadísticas." width="100%">
 </p>
 
 # Contesta

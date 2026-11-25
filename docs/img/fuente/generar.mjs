@@ -3,6 +3,7 @@
 //  - las capturas son del panel real, andando con datos de ejemplo cargados por el simulador
 //  - simulador.gif se arma solo si tenés ffmpeg instalado (si no, se saltea)
 // El diagrama (como-funciona.svg) está escrito a mano: se edita directo.
+// animacion.gif es una animación de producto armada aparte: este script no la toca.
 import { chromium } from "playwright";
 import { spawnSync } from "node:child_process";
 import fs from "node:fs";
