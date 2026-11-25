@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="docs/img/animacion.gif" alt="Animación del panel de Contesta: llega un comentario con la palabra GUÍA, la automatización «Comentá GUÍA y te la mando» lo detecta, sale la respuesta pública, se envía el mensaje privado con el link, el contacto queda guardado con la etiqueta guía y suben los números de las estadísticas." width="100%">
+  <img src="docs/img/animacion.gif" alt="Animación con datos de ejemplo. En un teléfono: una publicación pide comentar GUÍA, alguien escribe el comentario, la cuenta le responde en público y le llega el mensaje privado con el link. Después, el panel de Contesta: el contacto queda guardado con la etiqueta guía y suben los números de las estadísticas." width="100%">
 </p>
 
 # Contesta
