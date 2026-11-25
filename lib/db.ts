@@ -18,7 +18,18 @@ export interface Base {
 export async function abrirPostgres(url: string): Promise<Base> {
   const { default: postgres } = await import("postgres");
   // prepare:false es obligatorio con el pooler de Supabase en modo transacción (puerto 6543).
-  const sql = postgres(url, { prepare: false, max: 3, idle_timeout: 20, onnotice: () => {} });
+  // El código ya manda los JSON como texto ($1::jsonb): sin esto el driver los codificaría dos veces.
+  const comoTexto = (x: unknown) => (typeof x === "string" ? x : JSON.stringify(x));
+  const sql = postgres(url, {
+    prepare: false,
+    max: 3,
+    idle_timeout: 20,
+    onnotice: () => {},
+    types: {
+      json: { to: 114, from: [114], serialize: comoTexto, parse: (x: string) => JSON.parse(x) },
+      jsonb: { to: 3802, from: [3802], serialize: comoTexto, parse: (x: string) => JSON.parse(x) },
+    },
+  });
   return {
     async q<T>(texto: string, params: unknown[] = []) {
       return (await sql.unsafe(texto, params as never[])) as unknown as T[];

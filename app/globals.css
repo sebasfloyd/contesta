@@ -154,13 +154,13 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .icono-boton:hover:not(:disabled) { background: var(--linea-suave); color: var(--tinta); }
 .icono-boton:disabled { opacity: 0.3; cursor: default; }
 .hilo { width: 1.5px; height: 18px; background: var(--linea); margin-left: 27px; }
-.dos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.dos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
 .agregar { display: flex; flex-wrap: wrap; gap: 6px; }
 .barra-guardar { position: sticky; bottom: 0; margin: 18px -6px 0; padding: 12px 6px; background: linear-gradient(to top, var(--papel) 70%, transparent); display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
 
 /* Conversación */
 .charla { display: flex; flex-direction: column; gap: 8px; padding: 16px; background: var(--hoja); border: 1px solid var(--linea); border-radius: var(--radio); }
-.globo { max-width: min(78%, 520px); padding: 9px 12px; border-radius: 14px; background: #fff; border: 1px solid var(--linea); white-space: pre-wrap; overflow-wrap: anywhere; }
+.globo { align-self: flex-start; max-width: min(78%, 520px); padding: 9px 12px; border-radius: 14px; background: #fff; border: 1px solid var(--linea); white-space: pre-wrap; overflow-wrap: anywhere; }
 .globo.sale { align-self: flex-end; background: var(--verde-suave); border-color: transparent; }
 .globo.sale.humano { background: var(--tinta); color: var(--papel); }
 .globo.fallo { background: var(--rojo-suave); border-color: transparent; }
@@ -190,6 +190,8 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   .numeros { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .dos { grid-template-columns: 1fr; }
   .item { flex-wrap: wrap; }
+  .item-cuerpo { flex-basis: calc(100% - 70px); }
+  .item > form { margin-left: auto; }
   .ocultar-movil { display: none; }
   .globo { max-width: 88%; }
 }

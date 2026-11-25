@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" role="img" aria-labelledby="t d" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title id="t">Cómo funciona Contesta</title>
+  <desc id="d">Un comentario o un mensaje de Instagram llega a Contesta, que revisa las protecciones, busca la automatización que coincide y corre sus pasos: respuesta pública, mensaje privado y contacto guardado con etiquetas y datos.</desc>
+  <!-- Fondo propio para que se lea igual en el modo claro y en el oscuro de GitHub. -->
+  <rect width="1200" height="430" rx="18" fill="#f4f1ea"/>
+  <defs>
+    <marker id="punta" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#56625c"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#56625c" stroke-width="2" marker-end="url(#punta)">
+    <path d="M250 150H296"/>
+    <path d="M250 280H272V215H296"/>
+    <path d="M516 215H562"/>
+    <path d="M782 215H812V96H842"/>
+    <path d="M782 215H842"/>
+    <path d="M782 215H812V334H842"/>
+  </g>
+
+  <g font-size="13" font-weight="700" fill="#8a938d" letter-spacing="1.2">
+    <text x="40" y="52">1 · LLEGA</text>
+    <text x="300" y="52">2 · CONTESTA REVISA</text>
+    <text x="566" y="52">3 · ELIGE LA REGLA</text>
+    <text x="846" y="52">4 · RESPONDE Y GUARDA</text>
+  </g>
+
+  <g>
+    <rect x="40" y="112" width="210" height="76" rx="12" fill="#fcfbf7" stroke="#ddd8cc" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <text x="60" y="144" font-size="17" font-weight="700" fill="#17211d">Comentario</text>
+    <text x="60" y="168" font-size="14.5" fill="#56625c">«Quiero la GUÍA»</text>
+    <rect x="40" y="242" width="210" height="76" rx="12" fill="#fcfbf7" stroke="#ddd8cc" stroke-width="1.5"/>
+    <text x="60" y="274" font-size="17" font-weight="700" fill="#17211d">Mensaje privado</text>
+    <text x="60" y="298" font-size="14.5" fill="#56625c">o algo de una historia</text>
+  </g>
+
+  <g>
+    <rect x="300" y="112" width="216" height="206" rx="12" fill="#17211d"/>
+    <text x="320" y="146" font-size="17" font-weight="700" fill="#f4f1ea">Protecciones</text>
+    <g font-size="14.5" fill="#d7ddd9">
+      <text x="320" y="178">¿Ya lo procesé antes?</text>
+      <text x="320" y="204">¿Pidió la baja?</text>
+      <text x="320" y="230">¿Hay una persona a cargo?</text>
+      <text x="320" y="256">¿Se llegó al tope por hora?</text>
+      <text x="320" y="282">¿Sigue abierta la ventana</text>
+      <text x="320" y="302">de 24 hs?</text>
+    </g>
+  </g>
+
+  <g>
+    <rect x="566" y="112" width="216" height="206" rx="12" fill="#fcfbf7" stroke="#17211d" stroke-width="1.5"/>
+    <text x="586" y="146" font-size="17" font-weight="700" fill="#17211d">Automatización</text>
+    <text x="586" y="176" font-size="14.5" fill="#56625c">Disparador</text>
+    <rect x="586" y="186" width="58" height="24" rx="5" fill="#17211d"/>
+    <text x="615" y="203" font-size="12.5" font-weight="700" fill="#f4f1ea" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace">GUÍA</text>
+    <text x="586" y="240" font-size="14.5" fill="#56625c">Pasos en orden:</text>
+    <text x="586" y="264" font-size="14.5" fill="#17211d">responder, escribir, pedir</text>
+    <text x="586" y="284" font-size="14.5" fill="#17211d">un dato, etiquetar, esperar,</text>
+    <text x="586" y="304" font-size="14.5" fill="#17211d">IA, avisar a una persona</text>
+  </g>
+
+  <g>
+    <rect x="846" y="62" width="314" height="68" rx="12" fill="#dcede5" stroke="#0e7a5c" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <text x="866" y="92" font-size="17" font-weight="700" fill="#0a5f47">Respuesta pública</text>
+    <text x="866" y="114" font-size="14.5" fill="#0a5f47">«¡Listo! Te la mandé por privado.»</text>
+    <rect x="846" y="181" width="314" height="68" rx="12" fill="#dcede5" stroke="#0e7a5c" stroke-width="1.5"/>
+    <text x="866" y="211" font-size="17" font-weight="700" fill="#0a5f47">Mensaje privado</text>
+    <text x="866" y="233" font-size="14.5" fill="#0a5f47">«¿A qué mail te mando la guía?»</text>
+    <rect x="846" y="300" width="314" height="68" rx="12" fill="#fcfbf7" stroke="#ddd8cc" stroke-width="1.5"/>
+    <text x="866" y="330" font-size="17" font-weight="700" fill="#17211d">Contacto guardado</text>
+    <text x="866" y="352" font-size="14.5" fill="#56625c">etiquetas, mail, historial y estadísticas</text>
+  </g>
+
+  <text x="40" y="402" font-size="14" fill="#56625c">Instagram entra y sale por un «canal». Hoy hay dos: Composio (tu cuenta real) y el simulador (para probar sin Instagram).</text>
+</svg>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { contacto, mensajesDe } from "@/lib/consultas";
+import { ventanaAbierta } from "@/lib/texto";
 import { marcarAtendido, pausarBot, responderAMano } from "../../../acciones";
 import { Charla } from "../../../_ui/charla";
 import { Redactar } from "./redactar";
@@ -11,7 +12,7 @@ export default async function Conversacion({ params }: { params: Promise<{ id: s
   const c = await contacto((await params).id);
   if (!c) notFound();
   const mensajes = await mensajesDe(c.id);
-  const ventanaAbierta = !!c.ultimo_entrante && Date.now() - new Date(c.ultimo_entrante).getTime() < 24 * 60 * 60 * 1000;
+  const abierta = ventanaAbierta(c.ultimo_entrante);
   return (
     <>
       <Link href="/bandeja" className="volver">← Bandeja</Link>
@@ -38,7 +39,7 @@ export default async function Conversacion({ params }: { params: Promise<{ id: s
 
       {c.baja ? (
         <p className="aviso rojo" style={{ marginTop: 12 }}>Esta persona pidió no recibir más mensajes.</p>
-      ) : ventanaAbierta ? (
+      ) : abierta ? (
         <Redactar accion={responderAMano.bind(null, c.id)} />
       ) : (
         <p className="aviso" style={{ marginTop: 12 }}>No se le puede escribir: Instagram solo permite mensajes dentro de las 24 hs desde el último mensaje de la persona.</p>

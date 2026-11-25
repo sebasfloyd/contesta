@@ -10,8 +10,8 @@
     "tipos": "tsc --noEmit",
     "test": "vitest run",
     "preparar": "node scripts/preparar.mjs",
-    "migrar": "tsx scripts/migrar.ts",
-    "programar": "tsx scripts/programar.ts",
+    "migrar": "tsx scripts/migrar.mts",
+    "programar": "tsx scripts/programar.mts",
     "reloj": "node scripts/reloj.mjs",
     "prueba:panel": "node scripts/prueba-panel.mjs",
     "docs:img": "node docs/img/fuente/generar.mjs"

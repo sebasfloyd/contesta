@@ -60,3 +60,8 @@ export function fechaCorta(d: Date | string | null | undefined): string {
   const f = new Date(d);
   return f.toLocaleString("es-AR", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false });
 }
+
+/** ¿Sigue abierta la ventana de 24 hs de Instagram desde el último mensaje de la persona? */
+export function ventanaAbierta(ultimoEntrante: Date | string | null | undefined): boolean {
+  return !!ultimoEntrante && Date.now() - new Date(ultimoEntrante).getTime() < 24 * 60 * 60 * 1000;
+}

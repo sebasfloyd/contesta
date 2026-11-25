@@ -34,7 +34,7 @@ export default async function Automatizaciones() {
                   <ResumenDisparador d={a.disparador} />
                 </div>
                 <span className="chico tenue ocultar-movil" style={{ textAlign: "right" }}>
-                  {a.pasos.length} {a.pasos.length === 1 ? "paso" : "pasos"} · {n?.disparos ?? 0} disparos
+                  {a.pasos.length} {a.pasos.length === 1 ? "paso" : "pasos"} · {n?.disparos ?? 0} {n?.disparos === 1 ? "disparo" : "disparos"}
                 </span>
                 <form action={duplicar.bind(null, a.id)}><button className="boton claro mini">Duplicar</button></form>
               </div>

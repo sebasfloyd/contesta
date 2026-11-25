@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Portada de Contesta</title>
+<style>
+  /* Misma tipografía y paleta que el panel (app/globals.css). */
+  @font-face {
+    font-family: "Schibsted Grotesk Variable";
+    src: url("../../../node_modules/@fontsource-variable/schibsted-grotesk/files/schibsted-grotesk-latin-wght-normal.woff2") format("woff2");
+    font-weight: 400 900;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 100%; height: 100%; }
+  body {
+    background: #f4f1ea; color: #17211d;
+    font-family: "Schibsted Grotesk Variable", system-ui, sans-serif;
+    display: grid; grid-template-columns: 1.08fr 0.92fr; align-items: center; gap: 56px;
+    padding: 0 88px; overflow: hidden; -webkit-font-smoothing: antialiased;
+  }
+  .marca { display: flex; align-items: center; gap: 18px; }
+  .marca img { width: 68px; height: 68px; }
+  .marca span { font-size: 66px; font-weight: 760; letter-spacing: -0.04em; line-height: 1; }
+  h1 { margin-top: 34px; font-size: 43px; line-height: 1.12; letter-spacing: -0.028em; font-weight: 650; max-width: 15.5em; }
+  h1 em { font-style: normal; color: #0e7a5c; }
+  p { margin-top: 20px; font-size: 21px; color: #56625c; max-width: 30em; line-height: 1.4; }
+
+  .escena { display: flex; flex-direction: column; gap: 14px; font-size: 20px; }
+  .rotulo { font-size: 13px; letter-spacing: 0.09em; text-transform: uppercase; color: #8a938d; font-weight: 650; margin-bottom: -4px; }
+  .rotulo.der { text-align: right; }
+  .globo { max-width: 86%; padding: 13px 18px; border-radius: 18px; background: #fff; border: 1.5px solid #ddd8cc; line-height: 1.35; }
+  .globo b { font-weight: 650; }
+  .globo.publico { border-style: dashed; }
+  .globo.sale { align-self: flex-end; background: #dcede5; border-color: transparent; color: #0a5f47; }
+  .palabra { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.82em; padding: 2px 8px; border-radius: 6px; background: #17211d; color: #f4f1ea; letter-spacing: 0.03em; }
+  .ficha { align-self: flex-end; display: flex; align-items: center; gap: 10px; font-size: 16px; color: #56625c; }
+  .etiqueta { padding: 3px 12px; border-radius: 999px; background: #dcede5; color: #0a5f47; font-weight: 600; font-size: 15px; }
+
+  body.social { grid-template-columns: 1fr; padding: 0 96px; gap: 0; align-content: center; }
+  body.social .escena { display: none; }
+  body.social .marca img { width: 84px; height: 84px; }
+  body.social .marca span { font-size: 84px; }
+  body.social h1 { font-size: 58px; margin-top: 44px; max-width: 17em; }
+  body.social p { font-size: 27px; margin-top: 26px; max-width: 34em; }
+</style>
+</head>
+<body>
+  <div>
+    <div class="marca"><img src="../../../public/icono.svg" alt=""><span>Contesta</span></div>
+    <h1>Respondé los comentarios y mensajes de tu Instagram <em>en automático</em>, con tu propia cuenta.</h1>
+    <p>Automatizaciones con palabra clave, captura de mails, bandeja y contactos. Código a la vista, para leerlo y adaptarlo a tu negocio.</p>
+  </div>
+  <div class="escena" aria-hidden="true">
+    <div class="rotulo">Comentario</div>
+    <div class="globo publico"><b>@huerta.urbana</b> &nbsp;Quiero la <span class="palabra">GUÍA</span></div>
+    <div class="rotulo der">Respuesta pública</div>
+    <div class="globo sale publico">¡Listo! Te la mandé por privado.</div>
+    <div class="rotulo der">Mensaje privado</div>
+    <div class="globo sale">¡Hola! ¿A qué mail te mando la guía?</div>
+    <div class="globo">huerta@ejemplo.com</div>
+    <div class="ficha">Contacto guardado <span class="etiqueta">guía</span> <span class="etiqueta">mail</span></div>
+  </div>
+  <script>if (new URLSearchParams(location.search).get("formato") === "social") document.body.classList.add("social");</script>
+</body>
+</html>
