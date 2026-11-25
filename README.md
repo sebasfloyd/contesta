@@ -4,7 +4,7 @@
 
 # Contesta
 
-Respuestas automáticas para los comentarios y mensajes de tu Instagram, en un panel propio que instalás con tu cuenta. Una alternativa propia a herramientas como ManyChat, pensada para leerla, entenderla y adaptarla a tu negocio.
+**Tu propio ManyChat, gratis y con tu cuenta.** Respuestas automáticas para los comentarios y mensajes de tu Instagram, en un panel propio que instalás vos. El código está pensado para leerlo, entenderlo y adaptarlo a tu negocio.
 
 <p align="center">
   <img src="docs/img/automatizaciones.png" alt="Pantalla de automatizaciones: cinco reglas activas, cada una con su disparador y sus palabras clave, y debajo las plantillas listas para usar." width="100%">
