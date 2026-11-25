@@ -31,6 +31,9 @@ export default async function Panel({ children }: { children: React.ReactNode })
           <form action={salir}>
             <button className="boton claro mini">Salir</button>
           </form>
+          <a href="https://labdeai.com/?utm_source=contesta&utm_medium=panel&utm_campaign=contesta" target="_blank" rel="noreferrer" style={{ fontSize: 12, opacity: 0.6, textDecoration: "none", color: "inherit" }}>
+            Hecho en el LAB AI
+          </a>
         </div>
       </aside>
       <div>

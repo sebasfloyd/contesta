@@ -169,3 +169,7 @@ En lenguaje llano (esto no es asesoramiento legal; lo que vale es el texto de [L
 - Ofrecerlo como servicio pago a otros, ni cobrar por alojarlo o darle soporte cuando el valor de lo que cobrás viene de este programa.
 
 La licencia es Apache 2.0 con la condición Commons Clause. Titular: Ruptive AI, 2026. Si querés hacer algo que no entra acá, escribinos.
+
+## Hecho en el LAB AI
+
+Contesta es uno de los ejemplos del LAB AI, el programa de Seba Chuffer donde armás con IA sistemas como este para tu trabajo. Si querés aprender a construir los tuyos: [labdeai.com](https://labdeai.com/?utm_source=github&utm_medium=repo&utm_campaign=contesta).
